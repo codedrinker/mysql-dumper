@@ -23,8 +23,8 @@ class dump:
             os.system("echo $MYSQL_DUMPER_PASSWORD")
             os.system("echo $MYSQL_DUMPER_DATABASE")
 
-            os.system("echo \"mysqldump -h $MYSQL_DUMPER_HOST -u $MYSQL_DUMPER_USER -p $MYSQL_DUMPER_PASSWORD $MYSQL_DUMPER_DATABASE > $MYSQL_DUMPER_DATABASE.sql\"")
-            os.system("mysqldump -h $MYSQL_DUMPER_HOST -u $MYSQL_DUMPER_USER -p $MYSQL_DUMPER_PASSWORD $MYSQL_DUMPER_DATABASE > $MYSQL_DUMPER_DATABASE.sql")
+            os.system("echo \"mysqldump -h$MYSQL_DUMPER_HOST -u$MYSQL_DUMPER_USER -p$MYSQL_DUMPER_PASSWORD $MYSQL_DUMPER_DATABASE > $MYSQL_DUMPER_PATH/$MYSQL_DUMPER_DATABASE.sql\"")
+            os.system("mysqldump -h$MYSQL_DUMPER_HOST -u$MYSQL_DUMPER_USER -p$MYSQL_DUMPER_PASSWORD $MYSQL_DUMPER_DATABASE > $MYSQL_DUMPER_PATH/$MYSQL_DUMPER_DATABASE.sql")
             
             os.system("dumped")
             return "ok"
