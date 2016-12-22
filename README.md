@@ -7,8 +7,8 @@ install web.py
 sudo pip install web.py
 ```
 # Usage
-run app with port
+run app 
 ```
-python dumper.py 8887
+python dumper.py 8080 --mysql-dump-dir ~/ --mysql-host localhost --mysql-user root --mysql-password root --mysql-database mysql-dumper
 ```
 
