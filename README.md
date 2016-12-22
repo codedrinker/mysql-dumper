@@ -6,3 +6,9 @@ install web.py
 ```
 sudo pip install web.py
 ```
+# Usage
+run app with port
+```
+python dumper.py 8887
+```
+
