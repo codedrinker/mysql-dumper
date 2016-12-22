@@ -16,7 +16,7 @@ class dump:
     def GET(self):
         input = web.input()
         if input.password == "mysql-dumper":
-            return "dumping..."
+            os.system("dumping...")
             os.system("echo $MYSQL_DUMPER_PATH")
             os.system("echo $MYSQL_DUMPER_HOST")
             os.system("echo $MYSQL_DUMPER_USER")
@@ -25,7 +25,9 @@ class dump:
 
             os.system("echo \"mysqldump -h $MYSQL_DUMPER_HOST -u $MYSQL_DUMPER_USER -p $MYSQL_DUMPER_PASSWORD $MYSQL_DUMPER_DATABASE > $MYSQL_DUMPER_DATABASE.sql\"")
             os.system("mysqldump -h $MYSQL_DUMPER_HOST -u $MYSQL_DUMPER_USER -p $MYSQL_DUMPER_PASSWORD $MYSQL_DUMPER_DATABASE > $MYSQL_DUMPER_DATABASE.sql")
-            return "dumped."
+            
+            os.system("dumped")
+            return "ok"
         return "Authorization Failed."
 
 
